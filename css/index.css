@@ -2,47 +2,53 @@
   --nav-height-lg: 60px;
   --nav-height-sm: 30px;
 }
+html,
+body {
+  height: 100%;
+}
 body {
   margin: 0;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.test_name {
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* intro.css */
-
-@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Fasthand&family=Pangolin&display=swap");
-
-.sub {
-  font-family: Bagel + Fat + One;
-  position: absolute;
-  top: 13%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 25px;
-  color: white;
-  text-align: center;
-}
 .poster {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 350px;
-  height: 500px;
-  opacity: 0.9;
+  width: 50vh;
 }
-.start {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#wrap {
+  flex: 1; /* 화면 비율에 따라 유연하게 늘어나거나 줄어들게 */
+  margin-top: 10px;
+  min-height: calc(100%-30px);
+  position: relative;
 }
 
-#startButton {
-  font-family: Fasthand;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 25px;
+.i_left {
+  width: 50%;
+  float: left;
+}
+
+.i_right {
+  width: 50%;
+}
+
+#wrap .intro {
+  display: flex;
+  margin-top: 10px;
+  width: 50%;
+  padding: 0px 30px;
+}
+
+#startBtn {
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
-  width: 150px;
-  height: 50px;
+  width: 300px;
+  height: 70px;
+  letter-spacing: 2px;
 }
