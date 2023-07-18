@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/question_css.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <title>5</title>
+  </head>
+  <body>
+    <header>dd</header>
+    <div class="container">
+      <div class="bar">
+        <div class="long_bar">
+          <div class="short_bar"></div>
+        </div>
+      </div>
+      <div class="question">
+        <p>계획을 수립하고 추진할 때 나는</p>
+      </div>
+      <div class="answer">
+        <button class="answer1" onclick="location.href='question6.html'">
+          체계적이고 조직적으로 계획을 세운다.
+        </button>
+        <button class="answer2" onclick="location.href='question6.html'">
+          융통성 있게 계획을 수정하며 진행한다.
+        </button>
+      </div>
+    </div>
+    <footer>dd</footer>
+  </body>
+  <script>
+    let num = $("title").text();
+    $(".short_bar").attr("style", "width: calc(100/12*" + num + "%)");
+  </script>
+</html>

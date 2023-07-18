@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/question_css.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <title>6</title>
+  </head>
+  <body>
+    <header>dd</header>
+    <div class="container">
+      <div class="bar">
+        <div class="long_bar">
+          <div class="short_bar"></div>
+        </div>
+      </div>
+      <div class="question">
+        <p>공부를 시작하려고 앉았는데 책상이 지저분하다!</p>
+
+        <p>어떻게 할까?</p>
+      </div>
+      <div class="answer">
+        <button class="answer1" onclick="location.href='question7.html'">
+          책상이 깨끗해야 공부도 잘 되지! 책상을 먼저 치운다
+        </button>
+        <button class="answer2" onclick="location.href='question7.html'">
+          아 귀찮아 나중에 치우자.. 적당히 공부할 공간만 확보한다.
+        </button>
+      </div>
+    </div>
+    <footer>dd</footer>
+  </body>
+  <script>
+    let num = $("title").text();
+    $(".short_bar").attr("style", "width: calc(100/12*" + num + "%)");
+  </script>
+</html>
