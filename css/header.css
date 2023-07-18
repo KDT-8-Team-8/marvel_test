@@ -12,7 +12,6 @@ header {
 }
 
 header .inner {
-  /* background-color: beige; */
   height: 100%;
   display: flex;
   align-items: center;
