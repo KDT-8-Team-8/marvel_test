@@ -1,0 +1,48 @@
+:root {
+  --nav-height-lg: 60px;
+  --nav-height-sm: 30px;
+}
+body {
+  margin: 0;
+  height: 100%;
+}
+
+/* intro.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Fasthand&family=Pangolin&display=swap");
+
+.sub {
+  font-family: Bagel + Fat + One;
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: white;
+  text-align: center;
+}
+.poster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 500px;
+  opacity: 0.9;
+}
+.start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#startButton {
+  font-family: Fasthand;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+}
