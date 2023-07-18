@@ -16,7 +16,7 @@ function MBTI(ans) {
   let mbti_arr = ["I", "E", "N", "S", "T", "F", "J", "P"];
 
   for (let i = 0; i < 4; i++) {
-    if (res_arr[i] < 0.5) {
+    if (res_arr[i] > 0.5) {
       MBTIres += mbti_arr[2 * i];
     } else {
       MBTIres += mbti_arr[2 * i + 1];

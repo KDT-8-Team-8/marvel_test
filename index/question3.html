@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/css/question3_css.css" />
+    <link rel="stylesheet" href="/css/question_css.css" />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <title>1</title>
   </head>
   <body>
-    <header>dd</header>
+    <header>header 자리</header>
     <div class="container">
       <div class="bar">
         <div class="long_bar">
@@ -15,20 +21,32 @@
         </div>
       </div>
       <div class="question">
-        <p>여행지에 도착했는데 가기로 한 식당이 문을 닫았다..</p>
+        <p>갑자기 약속이 취소됐다...</p>
 
-        <p>이때 나의 선택은?</p>
+        <p>이 때 나의 기분은?</p>
       </div>
       <div class="answer">
-        <button class="answer1" onclick="location.href='question4.html'">
-          미리 준비해둔 plan B로 간다!
+        <button class="answer1" id="T">
+          아쉽다..다음에 보자..라고 하지만 속으로는 좋아한다
         </button>
-        <button class="answer2" onclick="location.href='question4.html'">
-          그냥 근처에 맛있어보이는 식당으로 들어간다!
+        <button class="answer2" id="F">
+          진짜 아쉬워서 다른 친구와의 약속을 새로 잡는다!
         </button>
       </div>
     </div>
-    <footer>dd</footer>
+    <footer>footer 자리</footer>
+    <script>
+      // 진행 바 변경
+      let num = $("title").text();
+      $(".short_bar").attr("style", "width: calc(100/12*" + num + "%)");
+
+      // 로컬스토리지 저장
+      $("button").click(function () {
+        my_key = $(this).attr("id");
+        console.log(my_key);
+        localStorage.setItem("answer3", my_key);
+        $(location).attr("href", "result.html");
+      });
+    </script>
   </body>
-  <script></script>
 </html>

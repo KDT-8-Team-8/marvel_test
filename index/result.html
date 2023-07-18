@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let resArr = [];
+      for (let i = 1; i <= 3; i++) {
+        let res = localStorage.getItem(`answer${i}`);
+        resArr.push(res);
+      }
+      let IE_res = 0;
+      let NS_res = 0;
+      let TF_res = 0;
+      let JP_res = 0;
+
+      for (let i = 0; i < 3; i++) {
+        if (resArr[i] === "I") {
+          IE_res += 1;
+        } else if (resArr[i] === "N") {
+          NS_res += 1;
+        } else if (resArr[i] === "T") {
+          TF_res += 1;
+        } else if (resArr[i] === "J") {
+          JP_res += 1;
+        }
+      }
+
+      let mbtiArr = [IE_res, NS_res, TF_res, JP_res];
+      console.log(IE_res);
+      console.log(NS_res);
+      console.log(TF_res);
+      console.log(JP_res);
+    </script>
+  </body>
+</html>
