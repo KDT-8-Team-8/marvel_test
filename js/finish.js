@@ -106,7 +106,8 @@ function check_char(ans) {
 // 사진 반영 함수
 function result(char) {
   var storedChar = sessionStorage.getItem("charValue"); //로컬 스토리지에 저장된 charValue 값을 가져온다.
-  var char = storedChar ? storedChar : "thanos";
+  var charValueFirst = sessionStorage.getItem("charValueFirst");
+  var char = storedChar ? storedChar : charValueFirst;
   //삼항 연산자를 사용하여 storedChar의 있으면 storedChar의 값을 사용하고 없으면 "dr_strange"(이부분을 설문조사 결과값으로 받아오면 된다.)사용.
 
   let imgElement = document.querySelector(".img");
@@ -369,6 +370,6 @@ function onClick(imageId) {
     char = document.querySelector(".worstMatchImg").alt;
   }
   result(char);
-  sessionStorage.setItem("charValue", char); //로컬 스토리지에 char값 저장
+  sessionStorage.setItem("charValue", char); //세션 스토리지에 char값 저장
   location.reload(); //현재 페이지 새로고침
 }
