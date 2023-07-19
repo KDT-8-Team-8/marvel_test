@@ -1,0 +1,54 @@
+/* header */
+ul {
+  margin: 0 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: var(--nav-height-lg);
+  z-index: 100;
+}
+
+header .inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* back */
+.back {
+  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* LOGO */
+header .inner .logo {
+  color: black;
+  font-size: 30px;
+  /*TODO 항상 가운데로 하려면..? */
+  position: relative;
+  left: 55px;
+  cursor: pointer;
+}
+
+header .inner .user {
+  display: flex;
+}
+
+header .inner .user li {
+  margin: 0px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 7px;
+  letter-spacing: 2px;
+}
+header .inner .user li:hover {
+  background-color: rgba(112, 128, 144, 0.3);
+}

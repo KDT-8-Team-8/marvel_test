@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결과 페이지</title>
+    <link rel="stylesheet" href="/marvel_test/CSS/finish.css" />
+  </head>
+  <body>
+    <div id="resultContainer">
+      <!--MBTI 결과값에 따라 변함-->
+      <div class="poster">
+        <img class="img" />
+      </div>
+      <div class="resultContent">
+        <h1 id="heroName">히어로 이름</h1>
+        <h2 id="resultMBTI">mbti 결과</h2>
+        <br />
+        <h2 id="explain">설명</h2>
+        <div class="match">
+          <div>
+            <h1>최고의 궁합</h1>
+            <h2 id="bestMatch"></h2>
+            <img class="bestMatchImg" onclick="onClick('bestMatchImg')" />
+          </div>
+          <div>
+            <h1>최악의 궁합</h1>
+            <h2 id="worstMatch"></h2>
+            <img class="worstMatchImg" onclick="onClick('worstMatchImg')" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/marvel_test/JS/finish.js"></script>
+    <script>
+      result();
+    </script>
+  </body>
+</html>
