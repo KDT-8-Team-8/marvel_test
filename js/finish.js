@@ -33,7 +33,7 @@ function MBTI(ans) {
   // ans에는 [0,1,3,0]등의 배열이 들어감
   // 질문 수
   let IE_question = 5;
-  let NS_question = 3;
+  let NS_question = 5;
   let TF_question = 5;
   let JP_question = 5;
   // 결과 값 넣을 변수
