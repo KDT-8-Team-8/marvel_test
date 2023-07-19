@@ -22,10 +22,21 @@
 <body>
   <header id="header"></header>
 
+  <!-- TODO: carousel 이미지 크기 안맞음 & carousel 크기 너무 큼 -->
   <div id="wrap">
     <h1 class="test_name">마블 성격 유형 테스트</h1>
-    <div class="intro i_left">
-      <img class="poster" src="../image/poster.jpg" alt="poster" />
+    <div id="carouselControl" class="intro i_left" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../image/poster.jpg" class="d-block w-100" alt="marvel_img1">
+        </div>
+        <div class="carousel-item">
+          <img src="../image/poster2.jpg" class="d-block w-100" alt="marvel_img2">
+        </div>
+        <div class="carousel-item">
+          <img src="../image/poster3.jpg" class="d-block" alt="marvel_img3">
+        </div>
+      </div>
     </div>
     <div class="intro i_right">
       <!-- <p>
@@ -36,6 +47,10 @@
   </div>
 
   <footer id="footer"></footer>
+
+  <!-- <script>
+    $('.carousel').carousel({ interval: 1000 });
+  </script> -->
 </body>
 
 </html>
