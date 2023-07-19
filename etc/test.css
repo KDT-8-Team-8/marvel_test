@@ -7,10 +7,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.progress {
-  background-color: red;
-  margin-top: 50px;
-}
+
 #wrap {
   flex: 1; /* 화면 비율에 따라 유연하게 늘어나거나 줄어들게 */
   min-height: calc(100%-30px);

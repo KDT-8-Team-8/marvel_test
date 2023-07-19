@@ -17,50 +17,55 @@ body {
   text-align: center;
 }
 
-/* intro.css */
 #wrap {
   flex: 1; /* 화면 비율에 따라 유연하게 늘어나거나 줄어들게 */
-  margin-top: 10px;
-  min-height: calc(100%-30px);
   position: relative;
 }
 
 .i_left {
-  width: 50vw;
-  height: 73vh;
+  padding-left: 20px;
   float: left;
 }
 
 .i_right {
-  width: 50vw;
+  padding-top: 7px;
+  padding-right: 20px;
 }
-
 #wrap .intro {
   position: relative;
   display: flex;
   margin-top: 10px;
   width: 50%;
-  padding: 5vh 5vh;
 }
 
 .poster {
-  position: absolute;
-  /* width: 50vh; */
   width: 100%;
-  height: 100%;
-  margin: auto;
   padding-right: 5vh;
 }
 
 #startBtn {
-  /* position: absolute; */
-  margin-top: 20px;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
   width: 100%;
   height: 70px;
   margin: auto;
-  padding-left: 5vh;
+  margin-left: 5vh;
   letter-spacing: 2px;
+}
+
+/** carousel css */
+
+/*! carousel 크기 조절 & 이미지 조절(carousel 크기에 맞게 잘리는 것 없이) - 화면 안넘치게 (스크롤 안생기게) */
+#carouselControl {
+  height: 78vh;
+}
+#carousel .fill {
+  background-size: auto 100%;
+}
+
+/* TODO */
+/** media query */
+
+@media screen and (max-width: 480px) {
 }
