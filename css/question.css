@@ -35,14 +35,15 @@ body {
 }
 
 /** 답  */
-.answer_container {
+.answer {
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-around;
   margin-top: 7vh;
 }
-.btn_ans {
+.answer1,
+.answer2 {
   background-color: beige;
   border-radius: 10%;
   width: 400px;
