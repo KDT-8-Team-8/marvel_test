@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>결과 페이지</title>
-    <link rel="stylesheet" href="/marvel_test/CSS/finish.css" />
+    <link rel="stylesheet" href="/css/finish.css" />
   </head>
   <body>
     <div id="resultContainer">
@@ -31,9 +31,16 @@
         </div>
       </div>
     </div>
-    <script src="/marvel_test/JS/finish.js"></script>
+    <script src="/js/finish.js"></script>
     <script>
-      result();
+      let res_arr = make_arr();
+      let user_mbti = MBTI(res_arr);
+      let user_char = check_char(user_mbti);
+      sessionStorage.setItem("charValue", user_char);
+      result(user_char);
+      console.log(res_arr);
+      console.log(user_mbti);
+      console.log(user_char);
     </script>
   </body>
 </html>
