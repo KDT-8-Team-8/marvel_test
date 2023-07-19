@@ -12,7 +12,7 @@
     ></script>
     <!-- header & footer 고정 -->
     <script src="../js/static.js"></script>
-    <title>3</title>
+    <title>6</title>
   </head>
 
   <body>
@@ -25,14 +25,15 @@
         </div>
       </div>
       <div class="question">
-        <p>나의 친구관계는</p>
+        <p>출근했는데 직장 상사가 오늘따라 까칠하다..</p>
+        <p>이 때 나의 기분은?</p>
       </div>
       <div class="answer">
-        <button class="answer1" id="I">
-          많은 사람과 연락하는 것이 힘들어.. 좁고 깊게!
+        <button class="answer1" id="N">
+          나 어제 뭐 잘못했나..? 하루종일 조마조마해 한다.
         </button>
-        <button class="answer2" id="E">
-          새로운 사람 만나는 것이 너무 즐거워! 넓고 얕게!
+        <button class="answer2" id="S">
+          기분이 좀 안좋으신가보다~ 하고 만다.
         </button>
       </div>
     </div>
@@ -47,8 +48,8 @@
       $("button").click(function () {
         my_key = $(this).attr("id");
         console.log(my_key);
-        localStorage.setItem("answer3", my_key);
-        $(location).attr("href", "question4.html");
+        localStorage.setItem("answer6", my_key);
+        $(location).attr("href", "question7.html");
       });
     </script>
   </body>
