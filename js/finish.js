@@ -2,7 +2,7 @@
 function make_arr() {
   let resArr = [];
   // 유저가 답한 I,E,N,S,T,F,J,P 배열에 추가
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 20; i++) {
     let res = localStorage.getItem(`answer${i}`);
     resArr.push(res);
   }
@@ -33,7 +33,7 @@ function MBTI(ans) {
   // ans에는 [0,1,3,0]등의 배열이 들어감
   // 질문 수
   let IE_question = 5;
-  let NS_question = 3;
+  let NS_question = 5;
   let TF_question = 5;
   let JP_question = 5;
   // 결과 값 넣을 변수
@@ -47,7 +47,7 @@ function MBTI(ans) {
   // 결과 값에 넣을 MBTI 배열로 활용
   let mbti_arr = ["I", "E", "N", "S", "T", "F", "J", "P"];
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 20; i++) {
     if (res_arr[i] > 0.5) {
       MBTIres += mbti_arr[2 * i];
     } else {
