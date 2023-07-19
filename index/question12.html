@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/question.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <!-- header & footer 고정 -->
+    <script src="../js/static.js"></script>
+    <title>마블 성격 유형 테스트</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="/css/question.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-    crossorigin="anonymous"></script>
-  <!-- header & footer 고정 -->
-  <script src="../js/static.js"></script>
-  <title>12</title>
-</head>
-
-<body>
-  <header id="header"></header>
-  <div class="progress">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" id="bar" role="progressbar"></div>
-  </div>
-  <div id="wrap">
-    <div class="question">
-      <p>내가 친구에게 오늘 뭐하냐고 물어보는 의도는?</p>
+  <body>
+    <header id="header"></header>
+    <div class="progress">
+      <div
+        class="progress-bar progress-bar-striped progress-bar-animated"
+        id="bar"
+        role="progressbar"
+      ></div>
     </div>
-    <div class="answer">
-      <button class="answer1" id="T">뭐하는지 궁금해서</button>
-      <button class="answer2" id="F">시간이 되는지 물어보려고</button>
+    <div id="wrap">
+      <div class="question">
+        <p>내가 친구에게 오늘 뭐하냐고 물어보는 의도는?</p>
+      </div>
+      <div class="answer">
+        <button class="answer1" id="T">뭐하는지 궁금해서</button>
+        <button class="answer2" id="F">시간이 되는지 물어보려고</button>
+      </div>
     </div>
-  </div>
 
-  <footer></footer>
-  <script>
-    // 진행 바 변경
-    let num = $("title").text();
-    $("#bar").attr("style", "width: calc(100/20*" + num + "%)");
+    <footer></footer>
+    <script>
+      // 진행 바 변경
+      let num = $("title").text();
+      $("#bar").attr("style", "width: calc(100/20*" + num + "%)");
 
-    // 로컬스토리지 저장
-    $("button").click(function () {
-      my_key = $(this).attr("id");
-      console.log(my_key);
-      localStorage.setItem("answer12", my_key);
-      $(location).attr("href", "question13.html");
-    });
-  </script>
-</body>
-
+      // 로컬스토리지 저장
+      $("button").click(function () {
+        my_key = $(this).attr("id");
+        console.log(my_key);
+        localStorage.setItem("answer12", my_key);
+        $(location).attr("href", "question13.html");
+      });
+    </script>
+  </body>
 </html>

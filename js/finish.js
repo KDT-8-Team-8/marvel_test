@@ -12,7 +12,7 @@ function make_arr() {
   let TF_res = 0;
   let JP_res = 0;
   // 유저 답안 배열 검사해 숫자 설정
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i <= 20; i++) {
     if (resArr[i] === "I") {
       IE_res += 1;
     } else if (resArr[i] === "N") {
@@ -47,7 +47,7 @@ function MBTI(ans) {
   // 결과 값에 넣을 MBTI 배열로 활용
   let mbti_arr = ["I", "E", "N", "S", "T", "F", "J", "P"];
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i <= 3; i++) {
     if (res_arr[i] > 0.5) {
       MBTIres += mbti_arr[2 * i];
     } else {
