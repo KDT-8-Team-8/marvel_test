@@ -1,4 +1,19 @@
-.container {
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrap {
+  flex: 1; /* 화면 비율에 따라 유연하게 늘어나거나 줄어들게 */
+  margin-top: 10px;
+  min-height: calc(100%-30px);
+  /* 원래 container에 있던 스타일 */
+  position: relative;
   background-color: aqua;
   text-align: center;
   justify-content: center;
@@ -6,6 +21,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .bar {
   background-color: aquamarine;
   width: 1200px;
