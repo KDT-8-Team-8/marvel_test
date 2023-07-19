@@ -47,7 +47,7 @@ function MBTI(ans) {
   // 결과 값에 넣을 MBTI 배열로 활용
   let mbti_arr = ["I", "E", "N", "S", "T", "F", "J", "P"];
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 20; i++) {
     if (res_arr[i] > 0.5) {
       MBTIres += mbti_arr[2 * i];
     } else {
