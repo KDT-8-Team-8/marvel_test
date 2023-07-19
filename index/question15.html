@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/question.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <!-- header & footer 고정 -->
+    <script src="../js/static.js"></script>
+    <title>15</title>
+  </head>
+
+  <body>
+    <header id="header"></header>
+
+    <div id="wrap">
+      <div class="bar">
+        <div class="long_bar">
+          <div class="short_bar"></div>
+        </div>
+      </div>
+      <div class="question">
+        <p>문제를 해결할 때 나는</p>
+      </div>
+      <div class="answer">
+        <button class="answer1" id="T">논리적인 해결책을 찾는다</button>
+        <button class="answer2" id="F">다양한 해결책을 모색한다.</button>
+      </div>
+    </div>
+
+    <footer>footer 자리</footer>
+    <script>
+      // 진행 바 변경
+      let num = $("title").text();
+      $(".short_bar").attr("style", "width: calc(100/20*" + num + "%)");
+
+      // 로컬스토리지 저장
+      $("button").click(function () {
+        my_key = $(this).attr("id");
+        console.log(my_key);
+        localStorage.setItem("answer15", my_key);
+        $(location).attr("href", "question16.html");
+      });
+    </script>
+  </body>
+</html>

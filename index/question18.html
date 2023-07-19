@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/question.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <!-- header & footer 고정 -->
+    <script src="../js/static.js"></script>
+    <title>18</title>
+  </head>
+
+  <body>
+    <header id="header"></header>
+
+    <div id="wrap">
+      <div class="bar">
+        <div class="long_bar">
+          <div class="short_bar"></div>
+        </div>
+      </div>
+      <div class="question">
+        <p>친구들을 집에 초대하는 나는...</p>
+      </div>
+      <div class="answer">
+        <button class="answer1" id="J">음식이 모자라지는 않을까?</button>
+        <button class="answer2" id="P">부족하면 치킨 시켜야지</button>
+      </div>
+    </div>
+
+    <footer>footer 자리</footer>
+    <script>
+      // 진행 바 변경
+      let num = $("title").text();
+      $(".short_bar").attr("style", "width: calc(100/20*" + num + "%)");
+
+      // 로컬스토리지 저장
+      $("button").click(function () {
+        my_key = $(this).attr("id");
+        console.log(my_key);
+        localStorage.setItem("answer18", my_key);
+        $(location).attr("href", "question19.html");
+      });
+    </script>
+  </body>
+</html>
