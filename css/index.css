@@ -57,13 +57,19 @@ body {
 /** carousel css */
 
 /*! carousel 크기 조절 & 이미지 조절(carousel 크기에 맞게 잘리는 것 없이) - 화면 안넘치게 (스크롤 안생기게) */
-#carouselControl {
+#carouselControls {
   height: 78vh;
 }
-#carousel .fill {
+#carouselControls .fill {
+  background-position: center;
   background-size: auto 100%;
 }
-
+#carouselControls .inner {
+  /* height: 100px; */
+}
+#carouselControls .inner img {
+  height: 78vh;
+}
 /* TODO */
 /** media query */
 

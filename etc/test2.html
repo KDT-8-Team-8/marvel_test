@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마블 성격 유형 테스트</title>
+    <link rel="stylesheet" href="../etc/test.css" />
+    <!-- jQuery 이용 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!-- header & footer 고정 -->
+    <script src="../js/static.js"></script>
+    <!-- boostrap 기능 이용위한 link 및 script 연결 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+    <script>
+        $(document).ready(function () {
+            resizeContent();
+        });
+
+        $(window).resize(function () {
+            resizeContent();
+        });
+
+        function resizeContent() {
+            var windowHeight = $(window).height();
+            var headerHeight = $("#header").height();
+            var TestNameHeight = $(".test_name").height()
+            var footerHeight = $("footer").height();
+            $('.intro').css({ 'height': (windowHeight - headerHeight - TestNameHeight - footerHeight) + 'px' });
+        }
+    </script>
+</head>
+
+<body>
+    <script src="/js/index.js"></script>
+    <div id="wrap">
+        <header id="header"></header>
+
+        <h1 class="test_name">마블 성격 유형 테스트</h1>
+        <div class="intro">
+            <div clsss="i_left">
+                <img class="poster" src="../image/poster4.jpg" alt="">
+            </div>
+            <div class="i_right">
+                <p>
+                    설명 글입니다. ㅇㅁㅇㅁ;도ㅜ대ㅜㅁㄴㅊ;ㄷ누알
+                    ㅁㅇㅁㄷㅊㄷㅍㅁㅈㄷㅍㄷㅁㄹㄴ
+                    ㄴㄷㅎㄴㄷ
+                </p>
+                <button id="startBtn" class="btn btn-light" onclick="start()">
+                    시작하기
+                </button>
+            </div>
+
+        </div>
+        <footer id="footer"></footer>
+    </div>
+
+
+</body>
+
+</html>

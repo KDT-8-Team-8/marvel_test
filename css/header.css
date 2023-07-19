@@ -9,6 +9,7 @@ header {
   width: 100%;
   height: var(--nav-height-lg);
   z-index: 100;
+  position: relative;
 }
 
 header .inner {
@@ -32,7 +33,7 @@ header .inner .logo {
   color: black;
   font-size: 30px;
   /*TODO 항상 가운데로 하려면..? */
-  left: 55px;
+  right: 55px;
   /* text-align: center; */
   position: relative;
   cursor: pointer;
