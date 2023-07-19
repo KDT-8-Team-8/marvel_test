@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/css/question_css.css" />
+    <link rel="stylesheet" href="/css/question.css" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,11 +10,15 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
-    <title>3</title>
+    <!-- header & footer 고정 -->
+    <script src="../js/static.js"></script>
+    <title>1</title>
   </head>
+
   <body>
-    <header>header 자리</header>
-    <div class="container">
+    <header id="header"></header>
+
+    <div id="wrap">
       <div class="bar">
         <div class="long_bar">
           <div class="short_bar"></div>
@@ -26,26 +30,27 @@
         <p>이 때 나의 기분은?</p>
       </div>
       <div class="answer">
-        <button class="answer1" id="T">
+        <button class="answer1" id="I">
           아쉽다..다음에 보자..라고 하지만 속으로는 좋아한다
         </button>
-        <button class="answer2" id="F">
+        <button class="answer2" id="E">
           진짜 아쉬워서 다른 친구와의 약속을 새로 잡는다!
         </button>
       </div>
     </div>
+
     <footer>footer 자리</footer>
     <script>
       // 진행 바 변경
       let num = $("title").text();
       $(".short_bar").attr("style", "width: calc(100/12*" + num + "%)");
 
-      // 로컬스토리지 저장1
+      // 로컬스토리지 저장
       $("button").click(function () {
         my_key = $(this).attr("id");
         console.log(my_key);
         localStorage.setItem("answer3", my_key);
-        $(location).attr("href", "finish.html");
+        $(location).attr("href", "result.html");
       });
     </script>
   </body>

@@ -13,7 +13,7 @@ body {
 }
 
 .test_name {
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -26,34 +26,41 @@ body {
 }
 
 .i_left {
-  width: 50%;
+  width: 50vw;
+  height: 73vh;
   float: left;
 }
 
 .i_right {
-  width: 50%;
+  width: 50vw;
 }
 
 #wrap .intro {
+  position: relative;
   display: flex;
   margin-top: 10px;
   width: 50%;
   padding: 5vh 5vh;
-  /* padding: 0px 30px; */
 }
 
 .poster {
-  width: 50vh;
+  position: absolute;
+  /* width: 50vh; */
+  width: 100%;
   height: 100%;
   margin: auto;
+  padding-right: 5vh;
 }
 
 #startBtn {
+  /* position: absolute; */
+  margin-top: 20px;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  width: 300px;
+  width: 100%;
   height: 70px;
   margin: auto;
+  padding-left: 5vh;
   letter-spacing: 2px;
 }
