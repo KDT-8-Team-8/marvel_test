@@ -2,7 +2,7 @@
 function make_arr() {
   let resArr = [];
   // 유저가 답한 I,E,N,S,T,F,J,P 배열에 추가
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 20; i++) {
     let res = localStorage.getItem(`answer${i}`);
     resArr.push(res);
   }
@@ -12,7 +12,7 @@ function make_arr() {
   let TF_res = 0;
   let JP_res = 0;
   // 유저 답안 배열 검사해 숫자 설정
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 20; i++) {
     if (resArr[i] === "I") {
       IE_res += 1;
     } else if (resArr[i] === "N") {
