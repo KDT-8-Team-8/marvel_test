@@ -22,26 +22,6 @@ body {
   align-items: center;
 }
 
-/* TODO : 라이브러리 통해 가져오는 게 나을듯?? */
-/** progress bar */
-.bar {
-  background-color: aquamarine;
-  width: 100%;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.long_bar {
-  background-color: aliceblue;
-  width: 1000px;
-  height: 50px;
-}
-.short_bar {
-  height: 50px;
-  background-color: yellow;
-}
-
 /** 질문  */
 .question {
   align-items: center;
