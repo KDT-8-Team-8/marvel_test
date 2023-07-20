@@ -14,24 +14,9 @@
     <!-- boostrap 기능 이용위한 link 및 script 연결 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-
-    <script>
-        $(document).ready(function () {
-            resizeContent();
-        });
-
-        $(window).resize(function () {
-            resizeContent();
-        });
-
-        function resizeContent() {
-            var windowHeight = $(window).height();
-            var headerHeight = $("#header").height();
-            var TestNameHeight = $(".test_name").height()
-            var footerHeight = $("footer").height();
-            $('.intro').css({ 'height': (windowHeight - headerHeight - TestNameHeight - footerHeight) + 'px' });
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -40,9 +25,32 @@
         <header id="header"></header>
 
         <h1 class="test_name">마블 성격 유형 테스트</h1>
+
         <div class="intro">
             <div clsss="i_left">
-                <img class="poster" src="../image/poster4.jpg" alt="">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../image/poster.jpg" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../image/poster2.jpg" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../image/poster4.jpg" class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
             <div class="i_right">
                 <p>
