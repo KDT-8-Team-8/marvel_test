@@ -76,6 +76,12 @@ body {
   width: 10px;
 }
 
+button[type="button"] {
+  width: 200px;
+  height: 70px;
+  word-wrap: break-word;
+}
+
 #T {
   width: 200px;
   height: 70px;
