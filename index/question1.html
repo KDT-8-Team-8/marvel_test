@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/css/question.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap 이용 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,11 +28,10 @@
     <div class="progress">
       <div
         class="progress-bar progress-bar-striped progress-bar-animated"
-        role="progressbar"
         id="bar"
+        role="progressbar"
       ></div>
     </div>
-
     <div id="wrap">
       <!-- * 질문 -->
       <div class="question">
@@ -55,7 +55,6 @@
       // 진행 바 변경
       let num = 1;
       localStorage.setItem("pagenumber", num);
-      console.log(num);
       $("#bar").attr("style", "width: calc(100/20*" + num + "%)");
 
       // 로컬스토리지 저장
