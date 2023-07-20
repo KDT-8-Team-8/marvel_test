@@ -72,3 +72,29 @@ body {
   width: 25vw;
   margin-bottom: 5vh;
 }
+
+.btn btn-outline-primary {
+  width: 10px;
+}
+
+#T {
+  width: 200px;
+  height: 70px;
+  word-wrap: break-word;
+}
+#F {
+  width: 200px;
+  height: 70px;
+  word-wrap: break-word;
+}
+
+#P {
+  width: 200px;
+  height: 70px;
+  word-wrap: break-word;
+}
+#J {
+  width: 200px;
+  height: 70px;
+  word-wrap: break-word;
+}
