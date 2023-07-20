@@ -410,7 +410,7 @@ function onClick(imageId) {
 function restart() {
   localStorage.clear();
   sessionStorage.clear();
-  location.href = "/index/index.html";
+  location.href = "/index.html";
 }
 var restartBtn = document.getElementById("restart");
 restartBtn.addEventListener("click", restart);
