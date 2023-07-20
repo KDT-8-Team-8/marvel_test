@@ -1,3 +1,7 @@
+:root {
+  --nav-height-lg: 60px;
+  --nav-height-sm: 30px;
+}
 /* header */
 ul {
   margin: 0 10px 0 0;
@@ -18,6 +22,7 @@ header .inner {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* back */
