@@ -12,6 +12,7 @@ body {
   padding: 0;
   height: 100%;
   animation: change 0.5s ease forwards;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -77,6 +78,7 @@ body {
 }
 
 button[type="button"] {
+<<<<<<< HEAD
   width: 200px;
   height: 70px;
   word-wrap: break-word;
@@ -101,5 +103,9 @@ button[type="button"] {
 #J {
   width: 200px;
   height: 70px;
+=======
+  width: 350px;
+  height: 80px;
+>>>>>>> 9c16d47c02b06d1c40e937f18f98fc6f918aee9c
   word-wrap: break-word;
 }
