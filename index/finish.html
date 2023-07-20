@@ -11,47 +11,57 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/static.js"></script>
   </head>
   <body>
-    <div class="fullscreen-video">
-      <!--뒷 배경 영상 출력-->
-      <video muted autoplay loop id="bgVideo" class="bgVideo">
-        <strong>해당 브라우저에서는 영상이 제공되지 않습니다.</strong>
-      </video>
-      <div id="resultContainer">
-        <!--MBTI 결과값에 따라 변함-->
-        <div class="poster">
-          <img class="img" />
-        </div>
-        <div class="resultContent">
-          <div id="heroName" style="font-size: 40px">히어로 이름</div>
-          <div id="resultMBTI" style="font-size: 25px">mbti 결과</div>
-          <div id="explain" style="font-size: 25px">설명</div>
-          <br /><br />
-          <div class="match">
+    <div>
+      <header id="header"></header>
+      <div class="fullscreen-video">
+        <!--뒷 배경 영상 출력-->
+        <video muted autoplay loop id="bgVideo" class="bgVideo">
+          <strong>해당 브라우저에서는 영상이 제공되지 않습니다.</strong>
+        </video>
+        <div id="resultContainer">
+          <!--MBTI 결과값에 따라 변함-->
+          <div class="poster">
+            <img class="img" />
+          </div>
+          <div class="resultContent">
+            <div id="heroName" style="font-size: 40px">히어로 이름</div>
+            <div id="resultMBTI" style="font-size: 25px">mbti 결과</div>
+            <div id="explain" style="font-size: 25px">설명</div>
+            <br /><br />
+            <div class="match">
+              <div>
+                <div style="font-size: 30px">최고의 궁합</div>
+                <div id="bestMatch" style="font-size: 20px"></div>
+                <img class="bestMatchImg" onclick="onClick('bestMatchImg')" />
+              </div>
+              <div>
+                <div style="font-size: 30px">노력이 필요한 궁합</div>
+                <div id="worstMatch" style="font-size: 20px"></div>
+                <img class="worstMatchImg" onclick="onClick('worstMatchImg')" />
+              </div>
+            </div>
+            <br />
             <div>
-              <div style="font-size: 30px">최고의 궁합</div>
-              <div id="bestMatch" style="font-size: 20px"></div>
-              <img class="bestMatchImg" onclick="onClick('bestMatchImg')" />
+              <div>궁합의 MBTI가 궁금하면</div>
+              <div>이미지를 클릭해보세요.</div>
             </div>
             <div>
-              <div style="font-size: 30px">노력이 필요한 궁합</div>
-              <div id="worstMatch" style="font-size: 20px"></div>
-              <img class="worstMatchImg" onclick="onClick('worstMatchImg')" />
+              <button id="restart" type="button" class="btn btn-outline-dark">
+                다시 하기
+              </button>
             </div>
-          </div>
-          <br />
-          <div>
-            <div>궁합의 MBTI가 궁금하면</div>
-            <div>이미지를 클릭해보세요.</div>
-          </div>
-          <div>
-            <button id="restart" type="button" class="btn btn-outline-dark">
-              다시 하기
-            </button>
           </div>
         </div>
       </div>
+      <footer id="footer"></footer>
     </div>
 
     <script src="/js/finish.js"></script>
