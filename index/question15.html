@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/question.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap 이용 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- jQuery 이용 -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <!-- header & footer 고정 -->
+    <script src="../js/static.js"></script>
+    <title>마블 성격 유형 테스트</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="/css/question.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- bootstrap 이용 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-  <!-- jQuery 이용 -->
-  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-    crossorigin="anonymous"></script>
-  <!-- header & footer 고정 -->
-  <script src="../js/static.js"></script>
-  <title>마블 성격 유형 테스트</title>
-</head>
-
-<body>
-  <header id="header"></header>
-  <div class="progress">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" id="bar" role="progressbar"></div>
-  </div>
-
-  <div id="wrap">
-    <div class="question">
-      <img src="/image/question15_img.jpg" class="question_img" alt="" style="width: 450px" />
-      <p>문제를 해결할 때 나는</p>
+  <body>
+    <header id="header"></header>
+    <div class="progress">
+      <div
+        class="progress-bar progress-bar-striped progress-bar-animated"
+        id="bar"
+        role="progressbar"
+      ></div>
     </div>
-    <div class="answer">
-      <button class="answer1" id="T">논리적인 해결책을 찾는다</button>
-      <button class="answer2" id="F">다양한 해결책을 모색한다.</button>
+
+    <div id="wrap">
+      <div class="question">
+        <img
+          src="/image/question15_img.jpg"
+          class="question_img"
+          alt=""
+          style="height: 30vh"
+        />
+        <p>문제를 해결할 때 나는</p>
+      </div>
+      <div class="answer">
+        <button class="answer1" id="T">논리적인 해결책을 찾는다</button>
+        <button class="answer2" id="F">다양한 해결책을 모색한다.</button>
+      </div>
     </div>
-  </div>
 
-  <footer></footer>
-  <script>
-    // 진행 바 변경
-    num = localStorage.getItem("pagenumber");
-    console.log(num);
-    localStorage.setItem("pagenumber", Number(num) + 1);
-    num = localStorage.getItem("pagenumber");
-    console.log(num);
-    $("#bar").attr("style", "width: calc(100/20*" + num + "%)");
+    <footer></footer>
+    <script>
+      // 진행 바 변경
+      num = localStorage.getItem("pagenumber");
+      console.log(num);
+      localStorage.setItem("pagenumber", Number(num) + 1);
+      num = localStorage.getItem("pagenumber");
+      console.log(num);
+      $("#bar").attr("style", "width: calc(100/20*" + num + "%)");
 
-    // 로컬스토리지 저장
-    $("button").click(function () {
-      my_key = $(this).attr("id");
-      console.log(my_key);
-      localStorage.setItem("answer15", my_key);
-      $(location).attr("href", "question16.html");
-    });
-  </script>
-</body>
-
+      // 로컬스토리지 저장
+      $("button").click(function () {
+        my_key = $(this).attr("id");
+        console.log(my_key);
+        localStorage.setItem("answer15", my_key);
+        $(location).attr("href", "question16.html");
+      });
+    </script>
+  </body>
 </html>
