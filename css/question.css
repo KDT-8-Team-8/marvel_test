@@ -77,24 +77,8 @@ body {
   width: 10px;
 }
 
-#T {
-  width: 200px;
-  height: 70px;
-  word-wrap: break-word;
-}
-#F {
-  width: 200px;
-  height: 70px;
-  word-wrap: break-word;
-}
-
-#P {
-  width: 200px;
-  height: 70px;
-  word-wrap: break-word;
-}
-#J {
-  width: 200px;
-  height: 70px;
+button[type="button"] {
+  width: 350px;
+  height: 80px;
   word-wrap: break-word;
 }
