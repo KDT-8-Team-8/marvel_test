@@ -1,6 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   height: 100%;
+  animation: change 0.5s ease forwards;
 }
 body {
   margin: 0;
@@ -8,8 +14,8 @@ body {
   flex-direction: column;
 }
 .progress {
-  background-color: red;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 #wrap {
   flex: 1; /* 화면 비율에 따라 유연하게 늘어나거나 줄어들게 */
@@ -28,14 +34,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 50px;
+  font-size: 40px;
   width: 100%;
   height: 500px;
-  background-color: antiquewhite;
 }
 
 /** 답  */
-.answerr {
+.answer {
   width: 100%;
   height: 100px;
   display: flex;
@@ -48,4 +53,21 @@ body {
   border-radius: 10%;
   width: 400px;
   font-size: 15px;
+}
+/* 페이지 변환 애니메이션 */
+
+@keyframes change {
+  from {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.question_img {
+  width: 600px;
+  margin-bottom: 50px;
 }
