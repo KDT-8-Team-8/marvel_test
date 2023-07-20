@@ -5,10 +5,12 @@
   <link rel="stylesheet" href="/css/question.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-    crossorigin="anonymous"></script>
+  <!-- bootstrap 이용 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <!-- jQuery 이용 -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
   <!-- header & footer 고정 -->
   <script src="../js/static.js"></script>
   <title>마블 성격 유형 테스트</title>
@@ -21,7 +23,11 @@
   </div>
   <div id="wrap">
     <div class="question">
-      <p>도로에서 운전 중인 당신! 갑자기 차가 매너없이 끼어든다.</p>
+      <img src="/image/question8_img.jpg" class="question_img" alt="" />
+      <p>
+        당신의 차고 앞에 어떤 차가 주차해놓아 입구가 막혔다! 차주가 전화도
+        받지 않는다..
+      </p>
       <p>이 때 당신의 기분은?</p>
     </div>
     <div class="answer">
@@ -29,7 +35,7 @@
         저 차를 부숴버릴 대포가 내 차에 있었으면 좋겠다..라고 생각한다.
       </button>
       <button class="answer2" id="S">
-        아오...뭐 저렇게 운전하냐? 화내고 만다.
+        아오...개념없는 사람이네..하고 다른 자리를 찾아본다.
       </button>
     </div>
   </div>
@@ -37,7 +43,11 @@
   <footer></footer>
   <script>
     // 진행 바 변경
-    let num = $("title").text();
+    num = localStorage.getItem("pagenumber");
+    console.log(num);
+    localStorage.setItem("pagenumber", Number(num) + 1);
+    num = localStorage.getItem("pagenumber");
+    console.log(num);
     $("#bar").attr("style", "width: calc(100/20*" + num + "%)");
 
     // 로컬스토리지 저장

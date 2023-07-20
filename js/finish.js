@@ -12,7 +12,7 @@ function make_arr() {
   let TF_res = 0;
   let JP_res = 0;
   // 유저 답안 배열 검사해 숫자 설정
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i <= 20; i++) {
     if (resArr[i] === "I") {
       IE_res += 1;
     } else if (resArr[i] === "N") {
@@ -47,7 +47,7 @@ function MBTI(ans) {
   // 결과 값에 넣을 MBTI 배열로 활용
   let mbti_arr = ["I", "E", "N", "S", "T", "F", "J", "P"];
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i <= 3; i++) {
     if (res_arr[i] > 0.5) {
       MBTIres += mbti_arr[2 * i];
     } else {
@@ -118,6 +118,7 @@ function result(char) {
   let worstMatchElement = document.getElementById("worstMatch");
   let bestMatchImgElement = document.querySelector(".bestMatchImg");
   let worstMatchImgElement = document.querySelector(".worstMatchImg");
+  let videoElement = document.querySelector(".bgVideo");
 
   if (char === "dr_strange") {
     imgElement.src = "/image/dr_strange.jpg";
@@ -134,6 +135,8 @@ function result(char) {
     worstMatchElement.textContent = "캡틴 아메리카";
     worstMatchImgElement.src = "/image/CaptainAmerica.jpg";
     worstMatchImgElement.alt = "cpt_america";
+
+    videoElement.src = "/video/dr_strange.mp4";
   } else if (char === "hulk") {
     imgElement.src = "/image/Hulk.jpg";
     imgElement.alt = "hulk";
@@ -149,6 +152,8 @@ function result(char) {
     worstMatchElement.textContent = "앤트맨";
     worstMatchImgElement.src = "/image/AntMan.jpg";
     worstMatchImgElement.alt = "ant_man";
+
+    videoElement.src = "/video/Hulk.mp4";
   } else if (char === "thanos") {
     imgElement.src = "/image/Thanos.jpg";
     imgElement.alt = "thanos";
@@ -164,6 +169,8 @@ function result(char) {
     worstMatchElement.textContent = "캡틴 마블";
     worstMatchImgElement.src = "/image/CaptainMarvel.jpg";
     worstMatchImgElement.alt = "cpt_marvel";
+
+    videoElement.src = "/video/Thanos.mp4";
   } else if (char === "iron_man") {
     imgElement.src = "/image/IronMan.jpg";
     imgElement.alt = "iron_man";
@@ -179,6 +186,8 @@ function result(char) {
     worstMatchElement.textContent = "호크아이";
     worstMatchImgElement.src = "/image/HawkEye.png";
     worstMatchImgElement.alt = "hawk_eye";
+
+    videoElement.src = "/video/IronMan.mp4";
   } else if (char === "vision") {
     imgElement.src = "/image/Vision.jpg";
     imgElement.alt = "vision";
@@ -194,6 +203,8 @@ function result(char) {
     worstMatchElement.textContent = "블랙팬서";
     worstMatchImgElement.src = "/image/BlackPanther.jpg";
     worstMatchImgElement.alt = "black_panther";
+
+    videoElement.src = "/video/Vision.mp4";
   } else if (char === "witch") {
     imgElement.src = "/image/ScarletWitch.jpg";
     imgElement.alt = "witch";
@@ -209,6 +220,8 @@ function result(char) {
     worstMatchElement.textContent = "토르";
     worstMatchImgElement.src = "/image/Thor.jpg";
     worstMatchImgElement.alt = "thor";
+
+    videoElement.src = "/video/ScarletWitch.mp4";
   } else if (char === "roki") {
     imgElement.src = "/image/Roki.jpg";
     imgElement.alt = "roki";
@@ -224,6 +237,8 @@ function result(char) {
     worstMatchElement.textContent = "블랙위도우";
     worstMatchImgElement.src = "/image/BlackWidow.jpg";
     worstMatchImgElement.alt = "black_widow";
+
+    videoElement.src = "/video/Roki.mp4";
   } else if (char === "spider_man") {
     imgElement.src = "/image/SpiderMan.jpg";
     imgElement.alt = "spider_man";
@@ -239,6 +254,8 @@ function result(char) {
     worstMatchElement.textContent = "스타로드";
     worstMatchImgElement.src = "/image/StarLord.jpg";
     worstMatchImgElement.alt = "star_load";
+
+    videoElement.src = "/video/SpiderMan.mp4";
   } else if (char === "hawk_eye") {
     imgElement.src = "/image/HawkEye.png";
     imgElement.alt = "hawk_eye";
@@ -254,6 +271,8 @@ function result(char) {
     worstMatchElement.textContent = "아이언맨";
     worstMatchImgElement.src = "/image/IronMan.jpg";
     worstMatchImgElement.alt = "iron_man";
+
+    videoElement.src = "/video/HawkEye.mp4";
   } else if (char === "cpt_america") {
     imgElement.src = "/image/CaptainAmerica.jpg";
     imgElement.alt = "cpt_america";
@@ -269,6 +288,8 @@ function result(char) {
     worstMatchElement.textContent = "닥터 스트레인지";
     worstMatchImgElement.src = "/image/dr_strange.jpg";
     worstMatchImgElement.alt = "dr_strange";
+
+    videoElement.src = "/video/CaptainAmerica.mp4";
   } else if (char === "cpt_marvel") {
     imgElement.src = "/image/CaptainMarvel.jpg";
     imgElement.alt = "cpt_marvel";
@@ -284,6 +305,8 @@ function result(char) {
     worstMatchElement.textContent = "타노스";
     worstMatchImgElement.src = "/image/Thanos.jpg";
     worstMatchImgElement.alt = "thanos";
+
+    videoElement.src = "/video/CaptainMarvel.mp4";
   } else if (char === "ant_man") {
     imgElement.src = "/image/AntMan.jpg";
     imgElement.alt = "ant_man";
@@ -299,6 +322,8 @@ function result(char) {
     worstMatchElement.textContent = "헐크";
     worstMatchImgElement.src = "/image/Hulk.jpg";
     worstMatchImgElement.alt = "hulk";
+
+    videoElement.src = "/video/AntMan.mp4";
   } else if (char === "black_widow") {
     imgElement.src = "/image/BlackWidow.jpg";
     imgElement.alt = "black_widow";
@@ -314,6 +339,8 @@ function result(char) {
     worstMatchElement.textContent = "로키";
     worstMatchImgElement.src = "/image/Roki.jpg";
     worstMatchImgElement.alt = "roki";
+
+    videoElement.src = "/video/BlackWidow.mp4";
   } else if (char === "black_panther") {
     imgElement.src = "/image/BlackPanther.jpg";
     imgElement.alt = "black_panther";
@@ -329,6 +356,8 @@ function result(char) {
     worstMatchElement.textContent = "비전";
     worstMatchImgElement.src = "/image/Vision.jpg";
     worstMatchImgElement.alt = "vision";
+
+    videoElement.src = "/video/BlackPanther.mp4";
   } else if (char === "star_load") {
     imgElement.src = "/image/StarLord.jpg";
     imgElement.alt = "star_load";
@@ -344,6 +373,8 @@ function result(char) {
     worstMatchElement.textContent = "스파이더맨";
     worstMatchImgElement.src = "/image/SpiderMan.jpg";
     worstMatchImgElement.alt = "spider_man";
+
+    videoElement.src = "/video/StarLord.mp4";
   } else if (char === "thor") {
     imgElement.src = "/image/Thor.jpg";
     imgElement.alt = "thor";
@@ -359,6 +390,8 @@ function result(char) {
     worstMatchElement.textContent = "스칼렛위치";
     worstMatchImgElement.src = "/image/ScarletWitch.jpg";
     worstMatchImgElement.alt = "witch";
+
+    videoElement.src = "/video/Thor.mp4";
   }
 }
 
@@ -373,3 +406,11 @@ function onClick(imageId) {
   sessionStorage.setItem("charValue", char); //세션 스토리지에 char값 저장
   location.reload(); //현재 페이지 새로고침
 }
+
+function restart() {
+  localStorage.clear();
+  sessionStorage.clear();
+  location.href = "/index/index.html";
+}
+var restartBtn = document.getElementById("restart");
+restartBtn.addEventListener("click", restart);
