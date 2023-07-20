@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --nav-height-lg: 60px;
   --nav-height-sm: 30px;
@@ -43,7 +51,14 @@ body {
   height: 70px;
   margin: auto;
   margin-bottom: 5vh;
+  line-height: 65px;
   letter-spacing: 2px;
+  font-family: "GmarketSansMedium";
+}
+
+h1,
+h4 {
+  font-family: "GmarketSansMedium";
 }
 
 /** carousel css */
