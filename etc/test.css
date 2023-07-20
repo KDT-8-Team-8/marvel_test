@@ -1,6 +1,11 @@
+:root {
+  --nav-height-lg: 60px;
+  --nav-height-sm: 30px;
+}
 html,
 body {
-  height: 100%;
+  width: 100%;
+  max-height: 100%;
 }
 body {
   margin: 0;
@@ -8,60 +13,71 @@ body {
   flex-direction: column;
 }
 
+.test_name {
+  margin-top: 15px;
+  text-align: center;
+}
+
 #wrap {
   flex: 1; /* 화면 비율에 따라 유연하게 늘어나거나 줄어들게 */
-  min-height: calc(100%-30px);
   position: relative;
+  width: 100%;
+}
+
+#wrap .intro {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 5vw;
+}
+
+.i_left {
+  /* position: absolute; */
+  display: table-cell;
+  vertical-align: center;
+  width: 50%;
+  height: 100%;
+  /* float: left; */
+  margin-right: 0 auto;
+}
+
+.slide {
+  display: flex;
+}
+.slide li img {
+  width: 100%;
+}
+.i_right {
+  display: table-cell;
+  vertical-align: center;
+  width: 50%;
+}
+
+.poster {
+  width: 100%;
+  /* height: 50%; */
+  margin: auto;
+}
+
+#startBtn {
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  height: 70px;
+  margin: auto;
+  letter-spacing: 2px;
 }
 
-/* TODO : 라이브러리 통해 가져오는 게 나을듯?? */
-/** progress bar */
-.bar {
-  background-color: aquamarine;
-  width: 100%;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.long_bar {
-  background-color: aliceblue;
-  width: 1000px;
-  height: 50px;
-}
-.short_bar {
-  height: 50px;
-  background-color: yellow;
+/** carousel css */
+.carousel-item img {
+  width: max-content;
+  height: 100vh;
 }
 
-/** 질문  */
-.question {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 50px;
-  width: 100%;
-  height: 500px;
-  background-color: antiquewhite;
-}
+/* TODO */
+/** media query */
 
-/** 답  */
-.answer_container {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 7vh;
-}
-.btn_ans {
-  background-color: beige;
-  border-radius: 10%;
-  width: 400px;
-  font-size: 15px;
+@media screen and (max-width: 480px) {
 }

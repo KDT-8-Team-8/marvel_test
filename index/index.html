@@ -14,49 +14,61 @@
   <!-- boostrap 기능 이용위한 link 및 script 연결 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 </head>
 
 <body>
   <script src="/js/index.js"></script>
-  <header id="header"></header>
 
-  <body>
+  <div id="wrap">
     <header id="header"></header>
 
-    <!-- TODO: carousel 이미지 크기 안맞음 & carousel 크기 너무 큼 -->
-    <div id="wrap">
-      <h1 class="test_name">마블 성격 유형 테스트</h1>
-      <div id="carouselControl" class="intro i_left" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../image/poster.jpg" class="d-block w-100" alt="marvel_img1">
+    <h1 class="test_name">마블 성격 유형 테스트</h1>
+
+    <div class="intro">
+      <audio src="../image/Marvel Studios Intro Bgm.mp3" autoplay type="audio/mp3" loop></audio>
+      <div clsss="i_left">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../image/poster.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="../image/poster2.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="../image/poster4.jpg" class="d-block w-100" alt="..." />
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="../image/poster2.jpg" class="d-block w-100" alt="marvel_img2">
-          </div>
-          <div class="carousel-item">
-            <img src="../image/poster3.jpg" class="d-block" alt="marvel_img3">
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-      <div class="intro i_right">
-        <!-- <p>
-                설명 글...
-            </p> -->
+      <div class="i_right">
+        <h4 style="text-align:center; margin:5vh 0;">
+          나는 마블 캐릭터 중 누구와 같을까요?<br>
+          (캐릭터: 아이언맨, 캡틴 아메리카, 토르, 로키, 스파이더맨)
+        </h4>
+        <!-- <br> -->
         <button id="startBtn" class="btn btn-light" onclick="start()">
           시작하기
         </button>
+        <br>
       </div>
+
     </div>
-
     <footer id="footer"></footer>
+  </div>
 
-    <!-- <script>
-    $('.carousel').carousel({ interval: 1000 });
-  </script> -->
-  </body>
+
+</body>
 
 </html>
