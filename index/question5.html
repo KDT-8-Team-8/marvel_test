@@ -44,7 +44,11 @@
     <footer></footer>
     <script>
       // 진행 바 변경
-      let num = $("title").text();
+      num = localStorage.getItem("pagenumber");
+      console.log(num);
+      localStorage.setItem("pagenumber", Number(num) + 1);
+      num = localStorage.getItem("pagenumber");
+      console.log(num);
       $("#bar").attr("style", "width: calc(100/20*" + num + "%)");
 
       // 로컬스토리지 저장
