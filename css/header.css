@@ -6,10 +6,6 @@
   font-style: normal;
 }
 
-* {
-  font-family: "IAMAPLAYER";
-}
-
 :root {
   --nav-height-lg: 60px;
   --nav-height-sm: 30px;
@@ -28,6 +24,7 @@ header {
   position: relative;
   display: flex;
   align-items: center;
+  font-family: "IAMAPLAYER";
 }
 
 header .inner {
