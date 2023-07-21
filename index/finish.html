@@ -28,8 +28,9 @@
     <script src="/js/apikey.js"></script>
     <script>
       const KaApiKey = config.apikey;
-      console.log(KaApiKey);
-      Kakao.init(KaApiKey);
+      const apikey = process.env.KAKAO_API_KEY;
+      console.log(apikey);
+      Kakao.init(apikey);
       Kakao.isInitialized();
       console.log(Kakao.isInitialized());
     </script>
