@@ -87,7 +87,6 @@ header .inner .user li:hover {
   }
 
   .logo {
-    left: 37%;
     font-size: 1.5em;
     line-height: var(--nav-height-lg);
   }
