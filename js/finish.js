@@ -289,7 +289,7 @@ function result(char) {
     worstMatchImgElement.src = "/image/dr_strange.jpg";
     worstMatchImgElement.alt = "dr_strange";
 
-    videoElement.src = "/video/CaptainAmerica.mp4";
+    videoElement.src = "/video/CaptinAmerica.mp4";
   } else if (char === "cpt_marvel") {
     imgElement.src = "/image/CaptainMarvel.jpg";
     imgElement.alt = "cpt_marvel";
@@ -414,3 +414,7 @@ function restart() {
 }
 var restartBtn = document.getElementById("restart");
 restartBtn.addEventListener("click", restart);
+
+document.getElementById("bgVideo").addEventListener("click", function () {
+  this.play();
+});
