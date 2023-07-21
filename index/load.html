@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +26,7 @@
           .classList.add("progress-animate");
       };
       const progressBar = document.querySelector(".progress-bar");
-      const animationDuration = 8000;
+      const animationDuration = 5000;
 
       setTimeout(function () {
         window.location.href = "finish.html";
@@ -41,11 +41,65 @@
     <div class="infor">과연 누구일까?</div>
     <div class="progress">
       <div
-        class="progress-bar progress-bar-striped progress-bar-animated"
+        class="progress-bar"
         id="bar"
         role="progressbar"
+        aria-valuenow="100"
+        aria-valuemin="0"
+        aria-valuemax="100"
       ></div>
     </div>
     <footer id="footer"></footer>
+
+    <!-- 폰트 설정 -->
+    <style>
+      @font-face {
+        font-family: "GmarketSansMedium";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .infor {
+        margin-top: 50px;
+        font-size: 40px;
+        font-family: "GmarketSansMedium";
+      }
+
+      .progress {
+        margin-top: 20px;
+        width: 50%;
+        height: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        animation: progress 5s linear infinite;
+        height: 100%;
+        background-color: #007bff;
+      }
+
+      @keyframes progress {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    </style>
   </body>
 </html>
