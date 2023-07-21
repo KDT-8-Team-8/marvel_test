@@ -1,3 +1,4 @@
+/* 폰트 불러오기 */
 @font-face {
   font-family: "GmarketSansMedium";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
@@ -14,13 +15,27 @@ body {
   animation: change 0.5s ease forwards;
   overflow-x: hidden;
 }
+
+/* 페이지 변환 애니메이션 */
+
+@keyframes change {
+  from {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
 }
 .progress {
-  margin-bottom: 5vh;
+  margin-bottom: 0;
 }
 #wrap {
   flex: 1; /* 화면 비율에 따라 유연하게 늘어나거나 줄어들게 */
@@ -51,21 +66,7 @@ body {
   height: 10vh;
   display: flex;
   justify-content: space-around;
-  margin-top: 7vh;
-
   font-family: "GmarketSansMedium";
-}
-/* 페이지 변환 애니메이션 */
-
-@keyframes change {
-  from {
-    transform: translateX(100%);
-    visibility: visible;
-  }
-
-  to {
-    transform: translateX(0%);
-  }
 }
 
 .question_img {
@@ -73,39 +74,11 @@ body {
   margin-bottom: 5vh;
 }
 
-.btn btn-outline-primary {
-  width: 10px;
-}
-
 button[type="button"] {
-<<<<<<< HEAD
-  width: 200px;
-  height: 70px;
-  word-wrap: break-word;
-}
-
-#T {
-  width: 200px;
-  height: 70px;
-  word-wrap: break-word;
-}
-#F {
-  width: 200px;
-  height: 70px;
-  word-wrap: break-word;
-}
-
-#P {
-  width: 200px;
-  height: 70px;
-  word-wrap: break-word;
-}
-#J {
-  width: 200px;
-  height: 70px;
-=======
   width: 350px;
   height: 80px;
->>>>>>> 9c16d47c02b06d1c40e937f18f98fc6f918aee9c
   word-wrap: break-word;
+}
+
+@media screen and (min-width: 768px) {
 }
