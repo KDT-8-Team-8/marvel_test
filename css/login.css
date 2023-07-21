@@ -17,6 +17,7 @@ body {
   margin: 0;
 }
 
+/* 화면 가운데 고정  */
 .container {
   position: relative;
   text-align: center;
