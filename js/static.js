@@ -6,4 +6,5 @@ function go_back() {
   history.back();
   let num = localStorage.getItem("pagenumber");
   localStorage.setItem("pagenumber", Number(num) - 2);
+  sessionStorage.clear();
 }
