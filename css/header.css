@@ -24,6 +24,7 @@ header {
   display: flex;
   align-items: center;
   font-family: "IAMAPLAYER";
+  justify-content: center;
 }
 
 header .inner {
@@ -44,10 +45,10 @@ header .inner {
 /* LOGO */
 .logo {
   display: flex;
+
   color: black;
   font-size: 30px;
   position: absolute;
-  left: 41.5vw;
   align-items: center;
   cursor: pointer;
 }
@@ -111,10 +112,11 @@ header .inner .user li:hover {
 
   .m_user {
     display: none;
-    margin-top: 110px;
+    z-index: 1;
+    position: relative;
+    top: 70px;
   }
   header .inner .m_user li {
-    /* position: absolute; */
     margin: 10px 10px;
     font-weight: bold;
     cursor: pointer;
@@ -131,9 +133,13 @@ header .inner .user li:hover {
   }
 
   .dropdown_contain:hover .dropdown {
-    display: block;
+    top: 60px;
+    display: relative;
+    left: 50px;
   }
   .dropdown_contain:hover .m_user {
     display: block;
+    top: 60px;
+    left: 10px;
   }
 }
