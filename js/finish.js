@@ -185,6 +185,7 @@ function result(char) {
     videoElement.src = "/video/dr_strange.mp4";
   } else if (char === "hulk") {
     imgElement.src = "/image/Hulk.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "hulk";
     heroNameElement.textContent = "헐크";
     resultMBTIElement.textContent = "INTP";
@@ -202,6 +203,7 @@ function result(char) {
     videoElement.src = "/video/Hulk.mp4";
   } else if (char === "thanos") {
     imgElement.src = "/image/Thanos.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "thanos";
     heroNameElement.textContent = "타노스";
     resultMBTIElement.textContent = "ENTJ";
@@ -219,6 +221,7 @@ function result(char) {
     videoElement.src = "/video/Thanos.mp4";
   } else if (char === "iron_man") {
     imgElement.src = "/image/IronMan.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "iron_man";
     heroNameElement.textContent = "아이언맨";
     resultMBTIElement.textContent = "ENTP";
@@ -236,6 +239,7 @@ function result(char) {
     videoElement.src = "/video/IronMan.mp4";
   } else if (char === "vision") {
     imgElement.src = "/image/Vision.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "vision";
     heroNameElement.textContent = "비전";
     resultMBTIElement.textContent = "INFJ";
@@ -253,6 +257,7 @@ function result(char) {
     videoElement.src = "/video/Vision.mp4";
   } else if (char === "witch") {
     imgElement.src = "/image/ScarletWitch.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "witch";
     heroNameElement.textContent = "스칼렛위치";
     resultMBTIElement.textContent = "INFP";
@@ -270,6 +275,7 @@ function result(char) {
     videoElement.src = "/video/ScarletWitch.mp4";
   } else if (char === "roki") {
     imgElement.src = "/image/Roki.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "roki";
     heroNameElement.textContent = "로키";
     resultMBTIElement.textContent = "ENFJ";
@@ -287,6 +293,7 @@ function result(char) {
     videoElement.src = "/video/Roki.mp4";
   } else if (char === "spider_man") {
     imgElement.src = "/image/SpiderMan.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "spider_man";
     heroNameElement.textContent = "스파이더맨";
     resultMBTIElement.textContent = "ENFP";
@@ -304,6 +311,7 @@ function result(char) {
     videoElement.src = "/video/SpiderMan.mp4";
   } else if (char === "hawk_eye") {
     imgElement.src = "/image/HawkEye.png";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "hawk_eye";
     heroNameElement.textContent = "호크아이";
     resultMBTIElement.textContent = "ISTJ";
@@ -321,6 +329,7 @@ function result(char) {
     videoElement.src = "/video/HawkEye.mp4";
   } else if (char === "cpt_america") {
     imgElement.src = "/image/CaptainAmerica.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "cpt_america";
     heroNameElement.textContent = "캡틴 아메리카";
     resultMBTIElement.textContent = "ISFJ";
@@ -338,6 +347,7 @@ function result(char) {
     videoElement.src = "/video/CaptinAmerica.mp4";
   } else if (char === "cpt_marvel") {
     imgElement.src = "/image/CaptainMarvel.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "cpt_marvel";
     heroNameElement.textContent = "캡틴 마블";
     resultMBTIElement.textContent = "ESTJ";
@@ -355,6 +365,7 @@ function result(char) {
     videoElement.src = "/video/CaptainMarvel.mp4";
   } else if (char === "ant_man") {
     imgElement.src = "/image/AntMan.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "ant_man";
     heroNameElement.textContent = "앤트맨";
     resultMBTIElement.textContent = "ESFJ";
@@ -372,6 +383,7 @@ function result(char) {
     videoElement.src = "/video/AntMan.mp4";
   } else if (char === "black_widow") {
     imgElement.src = "/image/BlackWidow.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "black_widow";
     heroNameElement.textContent = "블랙위도우";
     resultMBTIElement.textContent = "ISTP";
@@ -389,6 +401,7 @@ function result(char) {
     videoElement.src = "/video/BlackWidow.mp4";
   } else if (char === "black_panther") {
     imgElement.src = "/image/BlackPanther.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "black_panther";
     heroNameElement.textContent = "블랙팬서";
     resultMBTIElement.textContent = "ISFP";
@@ -406,6 +419,7 @@ function result(char) {
     videoElement.src = "/video/BlackPanther.mp4";
   } else if (char === "star_load") {
     imgElement.src = "/image/StarLord.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "star_load";
     heroNameElement.textContent = "스타로드";
     resultMBTIElement.textContent = "ESTP";
@@ -423,6 +437,7 @@ function result(char) {
     videoElement.src = "/video/StarLord.mp4";
   } else if (char === "thor") {
     imgElement.src = "/image/Thor.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "thor";
     heroNameElement.textContent = "토르";
     resultMBTIElement.textContent = "ESFP";
