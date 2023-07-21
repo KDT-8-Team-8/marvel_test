@@ -17,6 +17,22 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/static.js"></script>
+
+    <script
+      src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js"
+      integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Kakao.init("58ed501b761eaaf32f18d241ee7cf1ab");
+      Kakao.isInitialized();
+      console.log(Kakao.isInitialized());
+    </script>
+    <script>
+      // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해야 합니다.
+
+      // SDK 초기화 여부를 판단합니다.
+    </script>
   </head>
   <body>
     <div>
@@ -62,7 +78,12 @@
         </div>
         <div style="text-align: center">공유하기</div>
         <div class="img_box">
-          <img class="SNS" src="../image/kakao.jpg" alt="" />
+          <img
+            class="SNS"
+            src="../image/kakao.jpg"
+            alt="kakao"
+            onclick="js:KakaoShare()"
+          />
           <img class="SNS" src="../image/facebook.jpg" alt="" />
           <img class="SNS" src="../image/instagram.jpg" alt="" />
           <img class="SNS" src="../image/naver.jpg" alt="" />
@@ -76,11 +97,47 @@
       let res_arr = make_arr();
       let user_mbti = MBTI(res_arr);
       let user_char = check_char(user_mbti);
+      let resultValue = koreaResult(user_char);
       sessionStorage.setItem("charValueFirst", user_char);
+      sessionStorage.setItem("resultValue", resultValue);
       result();
       console.log("res_arr: ", res_arr);
       console.log("user_mbti: ", user_mbti);
       console.log("user_char: ", user_char);
+    </script>
+    <script>
+      function KakaoShare() {
+        const resultValue = sessionStorage.getItem("resultValue");
+        let Url = sessionStorage.getItem("Url");
+
+        Kakao.Share.sendDefault({
+          objectType: "feed",
+          content: {
+            title: "내가 만약 마블 캐릭터라면...?",
+            description: "간단한 검사를 통해 나의 마블 캐릭터를 알아보세요.",
+            imageUrl: "https://marveltest1.netlify.app/image/poster.jpg",
+            link: {
+              mobileWebUrl: "https://developers.kakao.com",
+              webUrl: "https://developers.kakao.com",
+            },
+          },
+          itemContent: {
+            profileText: "나는 " + resultValue + "야",
+            profileImageUrl: Url,
+            titleImageUrl: "https://marveltest1.netlify.app/image/poster2.jpg",
+            titleImageText: "너의 캐릭터는 뭐야?",
+          },
+          buttons: [
+            {
+              title: "웹으로 이동",
+              link: {
+                mobileWebUrl: "https://developers.kakao.com",
+                webUrl: "https://developers.kakao.com",
+              },
+            },
+          ],
+        });
+      }
     </script>
   </body>
 </html>

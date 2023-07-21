@@ -103,6 +103,51 @@ function check_char(ans) {
   }
 }
 
+function koreaResult(ans) {
+  let char_arr = [
+    "dr_strange", // INTJ
+    "hulk", // INTP
+    "thanos", // ENTJ
+    "iron_man", // ENTP
+    "vision", // INFJ
+    "witch", // INFP
+    "roki", // ENFJ
+    "spider_man", // ENFP
+    "hawk_eye", // ISTJ
+    "cpt_america", // ISFJ
+    "cpt_marvel", // ESTJ
+    "ant_man", // ESFJ
+    "black_widow", // ISTP
+    "black_panther", // ISFP
+    "star_load", // ESTP
+    "thor", // ESFP
+  ];
+  let korean = [
+    "닥터 스트레인지",
+    "헐크",
+    "타노스",
+    "아이언맨",
+    "비전",
+    "스칼렛 위치",
+    "로키",
+    "스파이더맨",
+    "호크아이",
+    "캡틴 아메리카",
+    "캡틴 마블",
+    "앤트맨",
+    "블랙 위도우",
+    "블랙팬서",
+    "스타로드",
+    "토르",
+  ];
+  for (let i = 0; i < 16; i++) {
+    if (ans == char_arr[i]) {
+      // 영문과 한글 매칭
+      return korean[i];
+    }
+  }
+}
+
 // 사진 반영 함수
 function result(char) {
   var storedChar = sessionStorage.getItem("charValue"); //로컬 스토리지에 저장된 charValue 값을 가져온다.
@@ -122,6 +167,7 @@ function result(char) {
 
   if (char === "dr_strange") {
     imgElement.src = "/image/dr_strange.jpg";
+    sessionStorage.setItem("Url", imgElement.src);
     imgElement.alt = "dr_strange";
     heroNameElement.textContent = "닥터 스트레인지";
     resultMBTIElement.textContent = "INTJ";
