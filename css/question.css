@@ -37,6 +37,7 @@ body {
   overflow: scroll;
 }
 .progress {
+  text-align: right;
   margin-bottom: 10px;
 }
 
