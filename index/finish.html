@@ -16,6 +16,7 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="/js/apikey.js"></script>
     <script src="../js/static.js"></script>
 
     <script
@@ -23,15 +24,14 @@
       integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh"
       crossorigin="anonymous"
     ></script>
+
+    <script src="/js/apikey.js"></script>
     <script>
-      Kakao.init("58ed501b761eaaf32f18d241ee7cf1ab");
+      const KaApiKey = config.apikey;
+      console.log(KaApiKey);
+      Kakao.init(KaApiKey);
       Kakao.isInitialized();
       console.log(Kakao.isInitialized());
-    </script>
-    <script>
-      // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해야 합니다.
-
-      // SDK 초기화 여부를 판단합니다.
     </script>
   </head>
   <body>
