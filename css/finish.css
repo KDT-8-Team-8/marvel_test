@@ -89,6 +89,18 @@
   margin-bottom: 10px;
 }
 
+.img_box {
+  display: flex;
+  justify-content: center;
+}
+.SNS {
+  width: 50px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+img:hover {
+  cursor: pointer;
+}
 /* 넓이가 768px이하일 때 적용 */
 @media screen and (max-width: 768px) {
   .img {
