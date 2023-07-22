@@ -28,14 +28,7 @@
     <script>
       const KaApiKey = KAKAO_API_KEY;
 
-      if (!KaApiKey) {
-        const apikey = process.env.KAKAO_API_KEY;
-        console.log(apikey);
-        Kakao.init(apikey);
-      } else {
-        console.log(KaApiKey);
-        Kakao.init(KaApiKey);
-      }
+      Kakao.init(KaApiKey);
       Kakao.isInitialized();
       console.log(Kakao.isInitialized());
     </script>
