@@ -39,7 +39,7 @@ header .inner {
   margin-left: 20px;
   width: 30px;
   height: 30px;
-  cursor: pointer;
+  cursor: pointer; /* 포인터 효과 */
 }
 
 /* LOGO */
