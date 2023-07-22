@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .line > img {
@@ -17,6 +18,9 @@ img:hover {
   cursor: pointer;
 }
 
-.line {
-  display: block;
+@media screen and (max-width: 768px) {
+  .line > img {
+    width: 45px;
+    height: 45px;
+  }
 }
