@@ -1,9 +1,7 @@
 <link rel="stylesheet" href="../css/header.css" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
+
+<!-- logo를 inner에 같이 넣으면 logo가 항상 화면의 가운데로 올 수 없기 때문에 inner에 넣지 않음 -->
 <div class="logo" onclick="location.href='../index.html'">BLUE MARVEL</div>
 <div class="inner">
   <img class="back" onclick="go_back()" src="../image/back.png" alt="뒤로가기" />
@@ -12,6 +10,7 @@
     <li onclick="location.href = '../index/all_char.html' ">CHARACTER</li>
   </ul>
 
+  <!-- mobile로 보았을 때 드롭다운으로 표현되어야 하기 때문에 따로 다시 만들어줌 -->
   <div class="dropdown_contain">
     <button class="dropdown">
       <img class="list" src="../image/list.svg" />

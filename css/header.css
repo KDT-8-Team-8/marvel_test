@@ -45,7 +45,6 @@ header .inner {
 /* LOGO */
 .logo {
   display: flex;
-
   color: black;
   font-size: 30px;
   position: absolute;
