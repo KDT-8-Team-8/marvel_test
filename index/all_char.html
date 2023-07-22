@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결과 페이지</title>
+    <link rel="stylesheet" href="/css/all_char.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/static.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <div class="container">
+      <div class="line">
+        <img id="hulk" src="../image/Hulk.jpg" alt="" />
+        <img id="dr_strange" src="../image/dr_strange.jpg" alt="" />
+        <img id="thanos" src="../image/Thanos.jpg" alt="" />
+        <img id="iron_man" src="../image/IronMan.jpg" alt="" />
+      </div>
+      <div class="line">
+        <img id="vision" src="../image/Vision.jpg" alt="" />
+        <img id="witch" src="../image/ScarletWitch.jpg" alt="" />
+        <img id="roki" src="../image/Roki.jpg" alt="" />
+        <img id="spider_man" src="../image/SpiderMan.jpg" alt="" />
+      </div>
+      <div class="line">
+        <img id="hawk_eye" src="../image/HawkEye.png" alt="" />
+        <img id="cpt_america" src="../image/CaptainAmerica.jpg" alt="" />
+        <img id="cpt_marvel" src="../image/CaptainMarvel.jpg" alt="" />
+        <img id="ant_man" src="../image/AntMan.jpg" alt="" />
+      </div>
+      <div class="line">
+        <img id="black_widow" src="../image/BlackWidow.jpg" alt="" />
+        <img id="black_panther" src="../image/BlackPanther.jpg" alt="" />
+        <img id="star_lord" src="../image/StarLord.jpg" alt="" />
+        <img id="thor" src="../image/thor.jpg" alt="" />
+      </div>
+    </div>
+    <footer id="footer"></footer>
+  </body>
+
+  <script>
+    $("img").click(function () {
+      let _id = $(this).attr("id");
+      sessionStorage.setItem("charValue", _id);
+      window.location.href = "finish.html";
+      console.log(_id);
+    });
+  </script>
+  <script src="/js/all_char.js"></script>
+</html>

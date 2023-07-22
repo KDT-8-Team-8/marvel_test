@@ -505,6 +505,7 @@ function restart() {
   sessionStorage.clear();
   location.href = "/index.html";
 }
+
 var restartBtn = document.getElementById("restart");
 restartBtn.addEventListener("click", restart);
 
