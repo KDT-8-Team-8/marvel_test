@@ -1,144 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>결과 페이지</title>
-    <link rel="stylesheet" href="/css/finish.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.js"
-      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="/js/apikey.js"></script>
-    <script src="../js/static.js"></script>
 
-    <script
-      src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js"
-      integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>결과 페이지</title>
+  <link rel="stylesheet" href="/css/finish.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/js/apikey.js"></script>
+  <script src="../js/static.js"></script>
 
-    <script src="/js/apikey.js"></script>
-    <script>
-      const KaApiKey = config.apikey;
-      const apikey = process.env.KAKAO_API_KEY;
-      console.log(apikey);
-      Kakao.init(apikey);
-      Kakao.isInitialized();
-      console.log(Kakao.isInitialized());
-    </script>
-  </head>
-  <body>
-    <div>
-      <header id="header"></header>
-      <div class="fullscreen-video">
-        <!--뒷 배경 영상 출력-->
-        <video muted playsinline autoplay loop id="bgVideo" class="bgVideo">
-          <strong>해당 브라우저에서는 영상이 제공되지 않습니다.</strong>
-        </video>
-        <div id="resultContainer">
-          <!--MBTI 결과값에 따라 변함-->
-          <div class="poster">
-            <img class="img" />
-          </div>
-          <div class="resultContent">
-            <div id="heroName">히어로 이름</div>
-            <div id="resultMBTI">mbti 결과</div>
-            <div id="explain">설명</div>
-            <br /><br />
-            <div class="match">
-              <div>
-                <div id="best">최고의 궁합</div>
-                <div id="bestMatch"></div>
-                <img class="bestMatchImg" onclick="onClick('bestMatchImg')" />
-              </div>
-              <div>
-                <div id="worst">노력이 필요한 궁합</div>
-                <div id="worstMatch"></div>
-                <img class="worstMatchImg" onclick="onClick('worstMatchImg')" />
-              </div>
-            </div>
-            <br />
-            <div id="endExplain">
-              <div>궁합의 MBTI가 궁금하면</div>
-              <div>이미지를 클릭해보세요.</div>
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js"
+    integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh"
+    crossorigin="anonymous"></script>
+
+  <script src="/js/apikey.js"></script>
+  <script>
+    const KaApiKey = config.apikey;
+    const apikey = process.env.KAKAO_API_KEY;
+    console.log(apikey);
+    Kakao.init(apikey);
+    Kakao.isInitialized();
+    console.log(Kakao.isInitialized());
+  </script>
+</head>
+
+<body>
+  <div>
+    <header id="header"></header>
+    <div class="fullscreen-video">
+      <!--뒷 배경 영상 출력-->
+      <video muted playsinline autoplay loop id="bgVideo" class="bgVideo">
+        <strong>해당 브라우저에서는 영상이 제공되지 않습니다.</strong>
+      </video>
+      <div id="resultContainer">
+        <!--MBTI 결과값에 따라 변함-->
+        <div class="poster">
+          <img class="img" />
+        </div>
+        <div class="resultContent">
+          <div id="heroName">히어로 이름</div>
+          <div id="resultMBTI">mbti 결과</div>
+          <div id="explain">설명</div>
+          <br /><br />
+          <div class="match">
+            <div>
+              <div id="best">최고의 궁합</div>
+              <div id="bestMatch"></div>
+              <img class="bestMatchImg" onclick="onClick('bestMatchImg')" />
             </div>
             <div>
-              <button id="restart" type="button" class="btn btn-outline-dark">
-                다시 하기
-              </button>
+              <div id="worst">노력이 필요한 궁합</div>
+              <div id="worstMatch"></div>
+              <img class="worstMatchImg" onclick="onClick('worstMatchImg')" />
             </div>
           </div>
-        </div>
-        <div style="text-align: center">공유하기</div>
-        <div class="img_box">
-          <img
-            class="SNS"
-            src="../image/kakao.jpg"
-            alt="kakao"
-            onclick="js:KakaoShare()"
-          />
-          <img class="SNS" src="../image/facebook.jpg" alt="" />
-          <img class="SNS" src="../image/instagram.jpg" alt="" />
-          <img class="SNS" src="../image/naver.jpg" alt="" />
+          <br />
+          <div id="endExplain">
+            <div>궁합의 MBTI가 궁금하면</div>
+            <div>이미지를 클릭해보세요.</div>
+          </div>
+          <div>
+            <button id="restart" type="button" class="btn btn-outline-dark">
+              다시 하기
+            </button>
+          </div>
         </div>
       </div>
-      <footer id="footer"></footer>
+      <div style="text-align: center">공유하기</div>
+      <div class="img_box">
+        <img class="SNS" src="../image/kakao.jpg" alt="kakao" onclick="js:KakaoShare()" />
+        <img class="SNS" src="../image/facebook.jpg" alt="" />
+        <img class="SNS" src="../image/instagram.jpg" alt="" />
+        <!-- <img class="SNS" src="../image/naver.jpg" alt="" /> -->
+      </div>
     </div>
+    <footer id="footer"></footer>
+  </div>
 
-    <script src="/js/finish.js"></script>
-    <script>
-      let res_arr = make_arr();
-      let user_mbti = MBTI(res_arr);
-      let user_char = check_char(user_mbti);
-      let resultValue = koreaResult(user_char);
-      sessionStorage.setItem("charValueFirst", user_char);
-      sessionStorage.setItem("resultValue", resultValue);
-      result();
-      console.log("res_arr: ", res_arr);
-      console.log("user_mbti: ", user_mbti);
-      console.log("user_char: ", user_char);
-    </script>
-    <script>
-      function KakaoShare() {
-        const resultValue = sessionStorage.getItem("resultValue");
-        let Url = sessionStorage.getItem("Url");
+  <script src="/js/finish.js"></script>
+  <script>
+    let res_arr = make_arr();
+    let user_mbti = MBTI(res_arr);
+    let user_char = check_char(user_mbti);
+    let resultValue = koreaResult(user_char);
+    sessionStorage.setItem("charValueFirst", user_char);
+    sessionStorage.setItem("resultValue", resultValue);
+    result();
+    console.log("res_arr: ", res_arr);
+    console.log("user_mbti: ", user_mbti);
+    console.log("user_char: ", user_char);
+  </script>
+  <script>
+    function KakaoShare() {
+      const resultValue = sessionStorage.getItem("resultValue");
+      let Url = sessionStorage.getItem("Url");
 
-        Kakao.Share.sendDefault({
-          objectType: "feed",
-          content: {
-            title: "내가 만약 마블 캐릭터라면...?",
-            description: "간단한 검사를 통해 나의 마블 캐릭터를 알아보세요.",
-            imageUrl: "https://marveltest1.netlify.app/image/poster.jpg",
+      Kakao.Share.sendDefault({
+        objectType: "feed",
+        content: {
+          title: "내가 만약 마블 캐릭터라면...?",
+          description: "간단한 검사를 통해 나의 마블 캐릭터를 알아보세요.",
+          imageUrl: "https://marveltest1.netlify.app/image/poster.jpg",
+          link: {
+            mobileWebUrl: "https://developers.kakao.com",
+            webUrl: "https://developers.kakao.com",
+          },
+        },
+        itemContent: {
+          profileText: "나는 " + resultValue + "야",
+          profileImageUrl: Url,
+          titleImageUrl: "https://marveltest1.netlify.app/image/poster2.jpg",
+          titleImageText: "너의 캐릭터는 뭐야?",
+        },
+        buttons: [
+          {
+            title: "웹으로 이동",
             link: {
               mobileWebUrl: "https://developers.kakao.com",
               webUrl: "https://developers.kakao.com",
             },
           },
-          itemContent: {
-            profileText: "나는 " + resultValue + "야",
-            profileImageUrl: Url,
-            titleImageUrl: "https://marveltest1.netlify.app/image/poster2.jpg",
-            titleImageText: "너의 캐릭터는 뭐야?",
-          },
-          buttons: [
-            {
-              title: "웹으로 이동",
-              link: {
-                mobileWebUrl: "https://developers.kakao.com",
-                webUrl: "https://developers.kakao.com",
-              },
-            },
-          ],
-        });
-      }
-    </script>
-  </body>
+        ],
+      });
+    }
+  </script>
+</body>
+
 </html>
