@@ -2,3 +2,5 @@
 
 #apikey.js 파일 제외
 /js/apikey.js
+
+.env
