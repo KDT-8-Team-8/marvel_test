@@ -78,6 +78,10 @@ header .inner .user li:hover {
     height: var(--nav-height-lg);
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
   .back {
     margin-left: 15px;
     width: 20px;
@@ -131,9 +135,9 @@ header .inner .user li:hover {
   }
 
   .dropdown_contain:hover .dropdown {
-    top: 60px;
+    top: 52px;
     display: relative;
-    left: 50px;
+    left: 48px;
   }
   .dropdown_contain:hover .m_user {
     display: block;
