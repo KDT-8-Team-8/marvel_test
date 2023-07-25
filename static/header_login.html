@@ -1,14 +1,31 @@
 <link rel="stylesheet" href="../css/header_login.css" />
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript" src="/js/apikey.js"></script>
+<script src="your-custom-script.js"></script>
 <script>
   const profileImageValue = localStorage.getItem("profileImage");
-  console.log("gkgk", profileImageValue);
 
   if (profileImageValue) {
     const profileImageElement = document.getElementById("profile_Image");
     const profileImgElement = document.getElementById("profile_Img");
-    console.log("dd", profileImageElement);
     profileImageElement.src = profileImageValue;
     profileImgElement.src = profileImageValue;
+  }
+
+  function kakaoLogOut() {
+    const KaApiKey = KAKAO_API_KEY;
+    //2. 카카오 초기화
+    Kakao.init(KaApiKey);
+
+    if (!Kakao.Auth.getAccessToken()) {
+      console.log("nono");
+      return;
+    }
+    Kakao.Auth.logout(function () {
+      localStorage.clear();
+      location.reload();
+      console.log("yes");
+    });
   }
 </script>
 
@@ -23,7 +40,7 @@
   />
   <ul class="user">
     <img src="/image/profileImage.jpg" alt="" id="profile_Image" />
-    <li onclick=>LOG OUT</li>
+    <li onclick="kakaoLogOut()">LOG OUT</li>
     <li onclick="location.href = '../index/all_char.html' ">CHARACTER</li>
   </ul>
 
@@ -35,7 +52,7 @@
     </button>
     <ul class="m_user" id="dp-content">
       <img src="/image/profileImage.jpg" alt="" id="profile_Img" />
-      <li onclick= >LOG OUT</li>
+      <li onclick="kakaoLogOut()">LOG OUT</li>
       <li onclick="location.href = '../index/all_char.html' ">CHARACTER</li>
     </ul>
   </div>
