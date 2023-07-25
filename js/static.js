@@ -9,6 +9,17 @@ function go_back() {
   sessionStorage.clear();
 }
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const profileImageValue = localStorage.getItem("profileImage");
+//   console.log("gkgk", profileImageValue);
+
+//   if (profileImageValue) {
+//     const profileImageElement = document.querySelector(".dropdown");
+//     console.log("dd", profileImageElement);
+//     // profileImageElement.src = profileImageValue;
+//   }
+// });
+
 /*
 $(document).ready(): 문서가 준비되면 매개변수로 넣은 콜백 함수 실행
 
