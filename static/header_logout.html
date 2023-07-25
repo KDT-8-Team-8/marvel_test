@@ -1,4 +1,14 @@
-<link rel="stylesheet" href="../css/header.css" />
+<link rel="stylesheet" href="../css/header_logout.css" />
+<script>
+  const profileImageValue = localStorage.getItem("profileImage");
+  console.log("gkgk", profileImageValue);
+
+  if (profileImageValue) {
+    const profileImageElement = document.getElementById("profile_Image");
+    console.log("dd", profileImageElement);
+    profileImageElement.src = profileImageValue;
+  }
+</script>
 
 <!-- logo를 inner에 같이 넣으면 logo가 항상 화면의 가운데로 올 수 없기 때문에 inner에 넣지 않음 -->
 <div class="logo" onclick="location.href='../index.html'">BLUE MARVEL</div>
@@ -10,7 +20,6 @@
     alt="뒤로가기"
   />
   <ul class="user">
-    <img src="/image/profileImage.jpg" alt="" id="profile_Image" />
     <li onclick="location.href = '../index/login.html' ">LOG IN</li>
     <li onclick="location.href = '../index/all_char.html' ">CHARACTER</li>
   </ul>
