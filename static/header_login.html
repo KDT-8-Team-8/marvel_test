@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../css/header_login.css" />
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script type="text/javascript" src="/js/apikey.js"></script>
-<script src="your-custom-script.js"></script>
+
 <script>
   const profileImageValue = localStorage.getItem("profileImage");
 
@@ -16,14 +16,9 @@
     const KaApiKey = KAKAO_API_KEY;
     //2. 카카오 초기화
     Kakao.init(KaApiKey);
-
-    if (!Kakao.Auth.getAccessToken()) {
-      console.log("nono");
-      return;
-    }
-    Kakao.Auth.logout(function () {
+    Kakao.Auth.logout(function (response) {
       localStorage.clear();
-      location.reload();
+      location.href = "../index.html";
       console.log("yes");
     });
   }
