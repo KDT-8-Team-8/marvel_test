@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "IAMAPLAYER";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --nav-height-lg: 60px;
+}
+/* header */
+ul {
+  margin: 0 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: var(--nav-height-lg);
+  z-index: 100;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: "IAMAPLAYER";
+  justify-content: center;
+}
+
+header .inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* back */
+.back {
+  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer; /* 포인터 효과 */
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .inner .user {
+  display: flex;
+  margin-bottom: 0;
+}
+
+header .inner .user li {
+  margin: 0px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 7px;
+  letter-spacing: 2px;
+}
+header .inner .user li:hover {
+  background-color: rgba(112, 128, 144, 0.3);
+}
+.dropdown_contain {
+  display: none;
+}
+#profile_Image {
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: var(--nav-height-lg);
+  }
+
+  #profile_Image {
+    display: none;
+  }
+
+  #profile_Img {
+    width: 40px;
+    height: 40px;
+    margin: 0px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .back {
+    margin-left: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .logo {
+    font-size: 1.5em;
+    line-height: var(--nav-height-lg);
+  }
+
+  header .inner .user li {
+    display: none;
+  }
+
+  .dropdown_contain {
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown {
+    border: none;
+    background-color: transparent;
+  }
+  .list {
+    color: black;
+    width: 30px;
+    height: 30px;
+  }
+
+  .m_user {
+    display: none;
+    z-index: 1;
+    position: relative;
+    top: 70px;
+  }
+  header .inner .m_user li {
+    margin: 10px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 7px;
+    letter-spacing: 2px;
+    background-color: white;
+    text-align: center;
+    font-size: small;
+  }
+  header .inner .m_user li:hover {
+    background-color: rgba(112, 128, 144, 0.3);
+  }
+
+  .dropdown_contain:hover .dropdown {
+    top: 52px;
+    display: relative;
+    left: 48px;
+  }
+  .dropdown_contain:hover .m_user {
+    display: block;
+    top: 60px;
+    left: 10px;
+  }
+}
