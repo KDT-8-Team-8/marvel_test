@@ -1,5 +1,10 @@
 $(document).ready(function () {
-  $("#header").load("../static/header.html");
+  const profileImageValue = localStorage.getItem("profileImage");
+  if (profileImageValue) {
+    $("#header").load("../static/header_login.html");
+  } else {
+    $("#header").load("../static/header_logout.html");
+  }
   $("footer").load("../static/footer.html");
 });
 function go_back() {
