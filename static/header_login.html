@@ -16,7 +16,7 @@
     const KaApiKey = KAKAO_API_KEY;
     //2. 카카오 초기화
     Kakao.init(KaApiKey);
-    Kakao.isInitialized();
+
     if (!Kakao.Auth.getAccessToken()) {
       console.log("nono");
       return;

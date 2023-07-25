@@ -63,6 +63,8 @@
             console.log(profile_nickname);
             console.log(id);
             console.log(profile_image);
+
+            window.location.href = "../index.html";
           },
           fail: function (error) {
             alert("카카오 로그인 실패" + JSON.stringify(error));
@@ -113,7 +115,6 @@
           /></a>
           <div id="user-info">
             <p id="token-result"></p>
-          </div>
           </div>
         </form>
       </div>
