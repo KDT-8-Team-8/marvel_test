@@ -4,9 +4,14 @@ function start() {
   const id = localStorage.getItem("id");
   const profileImage = localStorage.getItem("profileImage");
   localStorage.clear();
-  localStorage.setItem("nickname", nickname);
-  localStorage.setItem("id", id);
-  localStorage.setItem("profileImage", profileImage);
+  if (nickname && id && profileImage) {
+    localStorage.setItem("nickname", nickname);
+    localStorage.setItem("id", id);
+    localStorage.setItem("profileImage", profileImage);
+  } else {
+    localStorage.clear();
+  }
+
   location.href = "../index/question1.html";
 }
 var startBtn = document.getElementById("startBtn");
