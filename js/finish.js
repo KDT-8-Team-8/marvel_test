@@ -512,3 +512,78 @@ restartBtn.addEventListener("click", restart);
 document.getElementById("bgVideo").addEventListener("click", function () {
   this.play();
 });
+
+function saveResultToKakao() {
+  const charValueFirst = sessionStorage.getItem("charValueFirst");
+  const kakaoId = localStorage.getItem("id");
+  const accessToken = Kakao.Auth.getAccessToken();
+  if (accessToken) {
+    console.log("로그인 되어 있음");
+  } else {
+    console.log("로그인 되어 있지 않음");
+  }
+
+  Kakao.API.request({
+    url: "/v1/user/update_profile",
+    data: {
+      properties: {
+        charValueFirst: charValueFirst,
+      },
+    },
+  })
+    .then((res) => {
+      console.log("사용자 프로퍼티에 저장 성공: ", res);
+    })
+    .catch((error) => {
+      console.log("사용자 프로퍼티에 저장 실패: ", error);
+    });
+}
+
+// function saveResultToLocalStorage(userId, result) {
+//   const charResults =
+//     JSON.parse(sessionStorage.getItem("charValueFirst")) || {};
+//   charResults[userId] = result;
+//   localStorage.setItem("charValueFirst", JSON.stringify(charResults));
+//   console.log("ggggggg", charResults);
+// }
+
+// function saveResultAndKakaoInfo(authObj) {
+//   const id = localStorage.getItem("id");
+//   const resultValue = sessionStorage.getItem("charValueFirst");
+
+//   saveResultToLocalStorage(id, resultValue);
+//   console.log("kkkkkk", id, resultValue);
+// }
+
+//카카오 정보에 결과 저장하기
+// const KaApiKey = KAKAO_API_KEY;
+// Kakao.init(KAKAO_API_KEY);
+// Kakao.isInitialized();
+
+// window.addEventListener("load", function () {
+//   if (Kakao.Auth.getAccessToken()) {
+//     getInfoAndSaveResult();
+//     console.log("gkgk");
+//   }
+// });
+
+// function getInfoAndSaveResult() {
+//   Kakao.API.request({
+//     url: "/v2/user/me",
+//     success: function (res) {
+//       console.log(res);
+//       const kakaoId = res.id;
+//       const result = sessionStorage.getItem("charValueFirst");
+//       saveResult(kakaoId, result);
+//     },
+//     fail: function (error) {
+//       alert("실패" + JSON.stringify(error));
+//     },
+//   });
+// }
+// function saveResult(userId, result) {
+//   const mbtiResults =
+//     JSON.parse(sessionStorage.getItem("charValueFirst")) || {};
+//   mbtiResults[userId] = result;
+//   localStorage.setItem("mbtiresult", JSON.stringify(mbtiResults));
+// }

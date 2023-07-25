@@ -27,7 +27,6 @@
 
     <script>
       const KaApiKey = KAKAO_API_KEY;
-
       Kakao.init(KaApiKey);
       Kakao.isInitialized();
       console.log(Kakao.isInitialized());
@@ -73,6 +72,9 @@
               <button id="restart" type="button" class="btn btn-outline-dark">
                 다시 하기
               </button>
+            </div>
+            <div>
+              <button onclick="saveResultToKakao()">결과 저장하기</button>
             </div>
           </div>
         </div>
