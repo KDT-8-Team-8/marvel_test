@@ -158,7 +158,7 @@ header .inner .user li:hover {
   .dropdown_contain:hover .dropdown {
     top: 52px;
     display: relative;
-    left: 48px;
+    left: 44px;
   }
   .dropdown_contain:hover .m_user {
     display: block;
